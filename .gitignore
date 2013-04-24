@@ -13,3 +13,12 @@ config.status
 depcomp
 install-sh
 missing
+
+debian/default
+debian/files
+debian/sold.debhelper.log
+debian/sold.postinst.debhelper
+debian/sold.postrm.debhelper
+debian/sold.prerm.debhelper
+debian/sold.substvars
+
