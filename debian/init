@@ -20,9 +20,7 @@ DAEMON=/usr/sbin/$NAME
 DESC="sleep on lan daemon"
 PIDFILE=/var/run/$NAME.pid
 
-test -x $CLIENT_DAEMON || exit 0
-
-test -x $SERVER_DAEMON || exit 0
+test -x $DAEMON || exit 0
 
 . /lib/lsb/init-functions
 
@@ -58,7 +56,7 @@ sold_running()
 
 start_sold()
 {
-  start-stop-daemon --start --exec $DAEMON -- $OPTS
+  start-stop-daemon --start --background --exec $DAEMON -- $OPTS
   errcode=$?
   return $errcode
 }
@@ -73,7 +71,7 @@ stop_sold()
 
 case "$1" in
   start)
-    log_daemon_msg "Starting $SERVER_DESC" "$SERVER_NAME"
+    log_daemon_msg "Starting $DESC" "$NAME"
     # Check if it's running first
     if sold_running;  then
       log_progress_msg "apparently already running"
