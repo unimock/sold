@@ -22,3 +22,4 @@ debian/sold.postrm.debhelper
 debian/sold.prerm.debhelper
 debian/sold.substvars
 
+/home/bay/users/lynx/devel/sold/.issues/*
