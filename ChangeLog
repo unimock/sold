@@ -1,3 +1,9 @@
+sold (0.2) stable; urgency=low
+
+  * Interface configured in /etc/default/sold
+
+ -- André Roth <neolynx@gmail.com>  Sat, 18 Jun 2016 12:30:34 +0200
+
 sold (0.1) stable; urgency=low
 
   * Initial release.
