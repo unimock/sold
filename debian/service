@@ -1,0 +1,10 @@
+[Unit]
+Description=Sleep on LAN daemon
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/sold
+
+[Install]
+WantedBy=multi-user.target
+
