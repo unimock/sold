@@ -1,7 +1,7 @@
 /*
  * Sleep on LAN
  *
- * execute script on magic packets
+ * execute a script on magic packets
  *
  */
 
@@ -13,11 +13,13 @@
 #include <arpa/inet.h>
 #include <linux/if.h>
 #include <sys/ioctl.h>
+#include <sys/wait.h>
 
 #define PORT 9
 #define BUFLEN 512
 
-const char *interface = "eth0";
+char *default_interface = "eth0";
+const char *config = "/etc/default/sold";
 const char *script = "/etc/sold.sh";
 int up = 1;
 
@@ -31,6 +33,31 @@ int main( )
   int magic;
   pid_t pid;
   int status;
+  FILE *fh;
+  char line[128];
+  char interface[16];
+  char *t;
+
+  strncpy( interface, default_interface, sizeof( interface ));
+  interface[ sizeof( interface ) - 1 ] = '\0';
+
+  if(( fh = fopen( config, "r" )) != NULL )
+  {
+    while( fgets( line, sizeof(line), fh ) != NULL )
+    {
+      line[ sizeof( line ) - 1 ] = '\0';
+      /*printf( "line: %s", line );*/
+      if( sscanf( line, "INTERFACE=%ms", &t ) > 0 )
+      {
+        strncpy( interface, t, sizeof( interface ));
+        interface[ sizeof( interface ) - 1 ] = '\0';
+        free( t );
+        break;
+      }
+    }
+    fclose( fh );
+  }
+  printf( "interface: '%s'\n", interface );
 
   if(( sd = socket( AF_INET, SOCK_DGRAM, IPPROTO_UDP )) == -1 )
   {
