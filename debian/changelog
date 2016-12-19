@@ -1,1 +1,17 @@
-../ChangeLog
+sold (0.2.1) jessie; urgency=medium
+
+  * add rlx info
+
+ -- André Roth <andre.roth@roche.com>  Mon, 19 Dec 2016 16:56:57 +0100
+
+sold (0.2) stable; urgency=low
+
+  * Interface configured in /etc/default/sold
+
+ -- André Roth <neolynx@gmail.com>  Sat, 18 Jun 2016 12:30:34 +0200
+
+sold (0.1) stable; urgency=low
+
+  * Initial release.
+
+ -- André Roth <neolynx@gmail.com>  Wed, 24 Apr 2013 22:53:35 +0200
