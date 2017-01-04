@@ -15,3 +15,7 @@
 override_dh_auto_install:
 	dh_auto_install
 	cp -ar etc debian/sold/
+
+override_dh_installinit:
+	dh_systemd_enable
+
