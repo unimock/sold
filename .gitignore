@@ -20,5 +20,8 @@ debian/sold.postinst.debhelper
 debian/sold.postrm.debhelper
 debian/sold.prerm.debhelper
 debian/sold.substvars
+compile
+debian/debhelper-build-stamp
+
 
 .issues/*
