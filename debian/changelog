@@ -1,5 +1,11 @@
 sold (0.3) stable; urgency=medium
 
+  * bump version 0.3
+
+ -- André Roth <neolynx@gmail.com>  Thu, 10 Aug 2017 18:02:05 +0200
+
+sold (0.3) stable; urgency=medium
+
   * add molior.yml
 
  -- André Roth <neolynx@gmail.com>  Thu, 10 Aug 2017 17:59:40 +0200
