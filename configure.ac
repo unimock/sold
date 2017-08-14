@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.69])
-AC_INIT([sold], [0.3], [neolynx@gmail.com])
+AC_INIT([sold], [0.4], [neolynx@gmail.com])
 AC_CONFIG_SRCDIR([sold.c])
 
 # Checks for programs.
