@@ -1,3 +1,9 @@
+sold (0.7) stable; urgency=medium
+
+  * bump version 0.7
+
+ -- André Roth <neolynx@gmail.com>  Thu, 04 Apr 2024 11:21:55 +0200
+
 sold (0.6) stable; urgency=medium
 
   * bump version 0.6
