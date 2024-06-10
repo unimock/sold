@@ -1,3 +1,9 @@
+sold (0.23) stable; urgency=medium
+
+  * bump version 0.23
+
+ -- unimock <unimock@gate-m.de>  Mon, 10 Jun 2024 12:53:32 +0200
+
 sold (0.22) stable; urgency=medium
 
   * bump version 0.22
